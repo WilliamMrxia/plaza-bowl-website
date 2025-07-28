@@ -1,407 +1,333 @@
-
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plaza Bowl - Sudbury's Premier Bowling Entertainment Since 1960s</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'plaza-purple': '#6B46C1',
-                        'plaza-blue': '#3B82F6',
-                        'plaza-orange': '#F59E0B',
-                        'plaza-pink': '#EC4899',
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-        
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .hero-gradient {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-8px);
-        }
-        
-        .glow-effect {
-            box-shadow: 0 0 20px rgba(139, 69, 19, 0.3);
-        }
-        
-        .neon-text {
-            text-shadow: 0 0 10px currentColor;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-        
-        .float-animation {
-            animation: float 6s ease-in-out infinite;
-        }
-    </style>
+    <title>Plaza Bowl - Sudbury's Premier Bowling & Entertainment Destination</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-gray-900 text-white">
+<body>
     <!-- Header -->
-    <header class="bg-black/90 backdrop-blur-sm fixed w-full z-50 border-b border-purple-500/20">
-        <nav class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-3">
-                    <div class="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center">
-                        <span class="text-xl font-bold">PB</span>
-                    </div>
-                    <div>
-                        <h1 class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Plaza Bowl</h1>
-                        <p class="text-xs text-gray-400">Since 1960s</p>
-                    </div>
-                </div>
-                
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-white hover:text-purple-400 transition-colors font-medium">Home</a>
-                    <a href="#bowling" class="text-white hover:text-purple-400 transition-colors font-medium">Bowling</a>
-                    <a href="#billiards" class="text-white hover:text-purple-400 transition-colors font-medium">Billiards & Arcade</a>
-                    <a href="#restaurant" class="text-white hover:text-purple-400 transition-colors font-medium">King Pin Restaurant</a>
-                    <a href="#parties" class="text-white hover:text-purple-400 transition-colors font-medium">Parties & Events</a>
-                    <a href="#contact" class="text-white hover:text-purple-400 transition-colors font-medium">Contact</a>
-                </div>
-                
-                <button class="bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-2 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transition-all">
-                    Book Now
-                </button>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>PLAZA <span>BOWL</span></h1>
             </div>
-        </nav>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#bowling">Bowling</a></li>
+                    <li><a href="#arcade">Arcade</a></li>
+                    <li><a href="#restaurant">Restaurant</a></li>
+                    <li><a href="#billiards">Billiards</a></li>
+                    <li><a href="#darts">AR Darts</a></li>
+                    <li><a href="#massage">Massage Chairs</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-gradient min-h-screen flex items-center relative overflow-hidden">
-        <div class="absolute inset-0 bg-black/40"></div>
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="max-w-4xl mx-auto text-center">
-                <h1 class="text-5xl md:text-7xl font-bold mb-6 neon-text">
-                    Welcome to <span class="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">Plaza Bowl</span>
-                </h1>
-                <p class="text-xl md:text-2xl mb-8 text-gray-200">
-                    Sudbury's Premier Bowling Entertainment Since the 1960s
-                </p>
-                <p class="text-lg mb-10 max-w-3xl mx-auto text-gray-300">
-                    Experience our renovated facilities with 24 synthetic pro lanes, glow-in-the-dark features, 8 billiard tables, and the fully licensed King Pin Restaurant that seats up to 155 people.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button class="bg-gradient-to-r from-orange-500 to-red-600 px-8 py-4 rounded-full text-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all transform hover:scale-105">
-                        Start Bowling
-                    </button>
-                    <button class="border-2 border-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all">
-                        View Facilities
-                    </button>
-                </div>
-            </div>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>SUDBURY'S PREMIER BOWLING & ENTERTAINMENT DESTINATION</h2>
+            <p>Experience the ultimate fun with bowling, arcade games, restaurant, and more!</p>
+            <!-- <a href="#contact" class="btn">Book Now</a> -->
         </div>
-        
-        <!-- Floating Elements -->
-        <div class="absolute top-20 left-20 w-20 h-20 bg-purple-500/20 rounded-full float-animation"></div>
-        <div class="absolute bottom-20 right-20 w-16 h-16 bg-pink-500/20 rounded-full float-animation" style="animation-delay: 2s;"></div>
-        <div class="absolute top-1/2 left-10 w-12 h-12 bg-yellow-500/20 rounded-full float-animation" style="animation-delay: 4s;"></div>
     </section>
 
-    <!-- Features Grid -->
-    <section class="py-20 bg-gray-800">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">Our Amazing Facilities</h2>
-                <p class="text-xl text-gray-400">Everything you need for an unforgettable experience</p>
+    <!-- Bowling Section -->
+    <section id="bowling">
+        <div class="container">
+            <div class="section-title">
+                <h2>Bowling</h2>
             </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- 5-Pin Bowling -->
-                <div class="bg-gradient-to-br from-purple-900/50 to-purple-700/50 p-6 rounded-2xl card-hover glow-effect border border-purple-500/20">
-                    <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mb-4 mx-auto">
-                        <span class="text-2xl">🎳</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-center mb-3">18 Five-Pin Lanes</h3>
-                    <p class="text-gray-300 text-center">Professional synthetic lanes with glow-in-the-dark features and DJ lights</p>
+            <div class="content-row">
+                <div class="content-text">
+                    <h3>World-Class Bowling Experience</h3>
+                    <p>Welcome to the Plaza Bowl Website! Plaza Bowl has been in business since 1960s. We have worked hard during the summer months to renovate and improve our facilities.</p>
+                    <p>We have installed 24 synthetic pro lanes by CERTIFIED Brunswick Professionals Provides. Full lanes and Approaches are the most popular with Glow-In-The-Dark. The Down Lane Markers add more targets for bowler to improve their game.</p>
+                    <p>We also have installed 6 new lanes of 10-pin bowling and a new scoring system enabling customers to enjoy one of North America's most popular games.</p>
+                    <p>We have added Bowling Music Video. It is free to select your Music and Video. We have D J lights, Speakers and the most popular bowling music video cross North American. Our centre also has the Carpet, full lane and approaches with Glow in the Dark to enhance our Rock Glow bowling experience.</p>
+                    <p>We have 18 five pin lanes, 6 ten pin lanes, and offer league bowling for all ages (Youth, Adult and Senior).</p>
                 </div>
-                
-                <!-- 10-Pin Bowling -->
-                <div class="bg-gradient-to-br from-blue-900/50 to-blue-700/50 p-6 rounded-2xl card-hover glow-effect border border-blue-500/20">
-                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 mx-auto">
-                        <span class="text-2xl">🎯</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-center mb-3">6 Ten-Pin Lanes</h3>
-                    <p class="text-gray-300 text-center">New lanes with advanced scoring systems for North America's favorite game</p>
-                </div>
-                
-                <!-- Billiards -->
-                <div class="bg-gradient-to-br from-green-900/50 to-green-700/50 p-6 rounded-2xl card-hover glow-effect border border-green-500/20">
-                    <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mb-4 mx-auto">
-                        <span class="text-2xl">🎱</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-center mb-3">11 Pool Tables</h3>
-                    <p class="text-gray-300 text-center">8 full-size billiard tables and 3 nine-ball tables</p>
-                </div>
-                
-                <!-- Restaurant -->
-                <div class="bg-gradient-to-br from-orange-900/50 to-orange-700/50 p-6 rounded-2xl card-hover glow-effect border border-orange-500/20">
-                    <div class="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mb-4 mx-auto">
-                        <span class="text-2xl">🍽️</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-center mb-3">King Pin Restaurant</h3>
-                    <p class="text-gray-300 text-center">Fully licensed restaurant seating up to 155 people</p>
+                <div class="content-images">
+                    <img src="res/glow bowling.jpg" alt="Glow Bowling Lane">
+                    <img src="res/glow bowling.jpg" alt="Glow Bowling Lane Closeup">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Special Features -->
-    <section class="py-20 bg-gradient-to-br from-gray-900 to-purple-900">
-        <div class="container mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-4xl font-bold mb-6">Rock Glow Bowling Experience</h2>
-                    <div class="space-y-4 text-lg text-gray-300">
-                        <div class="flex items-start space-x-3">
-                            <span class="text-yellow-400 text-xl">✨</span>
-                            <p><strong class="text-white">Glow-in-the-Dark:</strong> Full lanes and approaches with carpet for an enhanced Rock Glow experience</p>
-                        </div>
-                        <div class="flex items-start space-x-3">
-                            <span class="text-pink-400 text-xl">🎵</span>
-                            <p><strong class="text-white">Music Video:</strong> Free music and video selection with DJ lights and speakers</p>
-                        </div>
-                        <div class="flex items-start space-x-3">
-                            <span class="text-blue-400 text-xl">🎯</span>
-                            <p><strong class="text-white">Down Lane Markers:</strong> Additional targets to help improve your game</p>
-                        </div>
-                        <div class="flex items-start space-x-3">
-                            <span class="text-green-400 text-xl">🏆</span>
-                            <p><strong class="text-white">Professional Quality:</strong> Installed by certified Brunswick professionals</p>
-                        </div>
-                    </div>
-                    <button class="mt-8 bg-gradient-to-r from-yellow-500 to-orange-600 px-8 py-3 rounded-full font-semibold hover:from-yellow-600 hover:to-orange-700 transition-all">
-                        Experience Rock Glow
-                    </button>
+    <!-- Arcade Section -->
+    <section id="arcade" style="background-color: #f0f4f8;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Arcade Games</h2>
+            </div>
+            <div class="content-row">
+                <div class="content-text">
+                    <h3>Exciting Arcade Experience</h3>
+ <p>Step into our vibrant arcade room filled with the latest and classic arcade games. Challenge your friends to a game of skill and see who comes out on top!</p>
+                    <p>Our arcade features state-of-the-art gaming stations with a variety of games for all ages. From racing simulators to shooting galleries, there's something for everyone in the family.</p>
+                    <p>With comfortable seating areas and vibrant lighting, our arcade is the perfect place to unwind and have fun with friends.</p>
                 </div>
-                
-                <div class="relative">
-                    <div class="w-full h-96 bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-2xl flex items-center justify-center border border-purple-500/30">
-                        <div class="text-center">
-                            <div class="w-32 h-32 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mb-4 mx-auto">
-                                <span class="text-6xl">🌟</span>
-                            </div>
-                            <p class="text-lg font-semibold">Glow Bowling Every Night</p>
-                            <p class="text-gray-400">Rock Glow: Noon - 5:00 PM</p>
-                        </div>
-                    </div>
+                <div class="content-images">
+                    <img src="res/arcade room start redemption1.jpg" alt="Arcade Redemption Game 1">
+                    <img src="res/arcade room start redemption2.jpg" alt="Arcade Redemption Game 2">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Leagues & Events -->
-    <section id="parties" class="py-20 bg-gray-800">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">Leagues, Parties & Events</h2>
-                <p class="text-xl text-gray-400">Perfect for all occasions and skill levels</p>
+    <!-- Restaurant Section -->
+    <section id="restaurant">
+        <div class="container">
+            <div class="section-title">
+                <h2>King Pin Restaurant</h2>
             </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Leagues -->
-                <div class="bg-gradient-to-br from-blue-900/30 to-purple-900/30 p-8 rounded-2xl border border-blue-500/20">
-                    <div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <span class="text-3xl">🏆</span>
-                    </div>
-                    <h3 class="text-2xl font-bold text-center mb-4">League Bowling</h3>
-                    <ul class="space-y-2 text-gray-300">
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> Youth Leagues</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> Adult Leagues</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> Senior Leagues</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> All Skill Levels Welcome</li>
-                    </ul>
-                    <button class="w-full mt-6 bg-blue-600 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors">
-                        Join a League
-                    </button>
+            <div class="content-row">
+                <div class="content-text">
+                    <h3>Fully Licensed Restaurant & Banquet Facility</h3>
+                    <p>Our King Pin Restaurant offers full banquet facilities that can seat up to 155 people. It can be used for birthday parties, stag and does, Christmas and corporate parties.</p>
+                    <p>Enjoy delicious meals and beverages in a comfortable setting. Our restaurant offers a variety of menu options to satisfy every taste.</p>
+                    <p>Whether you're planning a small gathering or a large celebration, our banquet facilities provide the perfect venue for your special occasion.</p>
                 </div>
-                
-                <!-- Birthday Parties -->
-                <div class="bg-gradient-to-br from-pink-900/30 to-red-900/30 p-8 rounded-2xl border border-pink-500/20">
-                    <div class="w-20 h-20 bg-pink-600 rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <span class="text-3xl">🎂</span>
-                    </div>
-                    <h3 class="text-2xl font-bold text-center mb-4">Birthday Parties</h3>
-                    <ul class="space-y-2 text-gray-300">
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> All Ages Welcome</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> Party Packages Available</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> Food & Drinks Included</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> Memorable Experience</li>
-                    </ul>
-                    <button class="w-full mt-6 bg-pink-600 py-3 rounded-full font-semibold hover:bg-pink-700 transition-colors">
-                        Plan Your Party
-                    </button>
-                </div>
-                
-                <!-- Corporate Events -->
-                <div class="bg-gradient-to-br from-green-900/30 to-teal-900/30 p-8 rounded-2xl border border-green-500/20">
-                    <div class="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <span class="text-3xl">🏢</span>
-                    </div>
-                    <h3 class="text-2xl font-bold text-center mb-4">Corporate Events</h3>
-                    <ul class="space-y-2 text-gray-300">
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> Team Building</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> Christmas Parties</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> Stag & Does</li>
-                        <li class="flex items-center"><span class="text-green-400 mr-2">✓</span> Up to 155 People</li>
-                    </ul>
-                    <button class="w-full mt-6 bg-green-600 py-3 rounded-full font-semibold hover:bg-green-700 transition-colors">
-                        Book Event
-                    </button>
+                <div class="content-images">
+                    <img src="https://placehold.co/600x400/16a085/white?text=King+Pin+Restaurant" alt="King Pin Restaurant" class="single-image">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Hours & Location -->
-    <section id="contact" class="py-20 bg-gradient-to-br from-purple-900 to-pink-900">
-        <div class="container mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-12">
-                <div>
-                    <h2 class="text-4xl font-bold mb-8">Visit Us Today</h2>
-                    
-                    <div class="space-y-6">
-                        <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
-                            <h3 class="text-xl font-bold mb-3 flex items-center">
-                                <span class="text-yellow-400 mr-3">⏰</span>
-                                Hours of Operation
-                            </h3>
-                            <div class="text-gray-200 space-y-1">
-                                <p><strong>Regular Hours:</strong> Check our Facebook for current hours</p>
-                                <p><strong>Rock Glow:</strong> Noon - 5:00 PM</p>
-                                <p><strong>Spring (May & June):</strong> Noon - 1:00 AM (Fri & Sat)</p>
-                                <p><strong>Summer:</strong> Closed (July - August)</p>
-                                <p><strong>King Pin Restaurant:</strong> Opens 11:00 AM daily</p>
-                                <p><strong>Kitchen & Snack Bar:</strong> Opens 10:00 AM</p>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
-                            <h3 class="text-xl font-bold mb-3 flex items-center">
-                                <span class="text-blue-400 mr-3">📍</span>
-                                Location & Contact
-                            </h3>
-                            <div class="text-gray-200 space-y-2">
-                                <p><strong>Phone:</strong> 1-705-566-0201</p>
-                                <p><strong>Email:</strong> info@plazabowl.com</p>
-                                <p><strong>Address:</strong> Sudbury, Ontario</p>
-                                <div class="flex space-x-4 mt-4">
-                                    <a href="http://www.facebook.com/Sudbury-Plaza-Bowl" class="bg-blue-600 px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-colors">
-                                        Follow on Facebook
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <!-- Billiards Section -->
+    <section id="billiards" style="background-color: #f0f4f8;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Billiards</h2>
+            </div>
+            <div class="content-row">
+                <div class="content-text">
+                    <h3>Premium Billiard Tables</h3>
+                    <p>We have 8 full size billiard tables and 3 nine ball tables for you to enjoy. Whether you're a seasoned player or just learning, our tables provide the perfect playing surface.</p>
+                    <p>Challenge friends to a game of 8-ball, 9-ball, or straight pool in our comfortable and well-lit billiards area.</p>
+                    <p>Our tables are maintained to professional standards, ensuring a true roll and consistent play.</p>
                 </div>
-                
-                <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-sm">
-                    <h3 class="text-2xl font-bold mb-6">Ready to Bowl?</h3>
-                    <form class="space-y-4">
-                        <div>
-                            <label class="block text-sm font-medium mb-2">Name</label>
-                            <input type="text" class="w-full px-4 py-3 bg-white/20 rounded-lg border border-white/30 focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 outline-none transition-all">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium mb-2">Phone</label>
-                            <input type="tel" class="w-full px-4 py-3 bg-white/20 rounded-lg border border-white/30 focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 outline-none transition-all">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium mb-2">Event Type</label>
-                            <select class="w-full px-4 py-3 bg-white/20 rounded-lg border border-white/30 focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 outline-none transition-all">
-                                <option value="">Select an option</option>
-                                <option value="bowling">Regular Bowling</option>
-                                <option value="birthday">Birthday Party</option>
-                                <option value="corporate">Corporate Event</option>
-                                <option value="league">League Information</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium mb-2">Message</label>
-                            <textarea rows="4" class="w-full px-4 py-3 bg-white/20 rounded-lg border border-white/30 focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 outline-none transition-all resize-none"></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-pink-600 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all">
-                            Send Message
-                        </button>
-                    </form>
+                <div class="content-images">
+                    <img src="https://placehold.co/600x400/8e44ad/white?text=Billiard+Table+1" alt="Billiard Table">
+                    <img src="https://placehold.co/600x400/9b59b6/white?text=Billiard+Table+2" alt="Billiard Table">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AR Darts Section -->
+    <section id="darts">
+        <div class="container">
+            <div class="section-title">
+                <h2>AR Darts</h2>
+            </div>
+            <div class="content-row">
+                <div class="content-text">
+                    <h3>Augmented Reality Darts Experience</h3>
+                    <p>Experience the future of darts with our cutting-edge AR Darts system. This innovative technology combines traditional darts gameplay with augmented reality for an immersive experience.</p>
+                    <p>Our AR Darts setup features interactive targets, digital scoring, and a variety of game modes that bring a new level of excitement to this classic game.</p>
+                    <p>Perfect for both casual players and competitive enthusiasts looking for a unique twist on a beloved pastime.</p>
+                </div>
+                <div class="content-images">
+                    <img src="https://placehold.co/600x400/2980b9/white?text=AR+Darts" alt="AR Darts" class="single-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Massage Chairs Section -->
+    <section id="massage" style="background-color: #f0f4f8;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Massage Chairs</h2>
+            </div>
+            <div class="content-row">
+                <div class="content-text">
+                    <h3>Relaxation & Recovery</h3>
+                    <p>After an intense bowling session or gaming marathon, unwind in our premium massage chairs. These state-of-the-art chairs offer various massage programs to help you relax and rejuvenate.</p>
+                    <p>With multiple intensity levels and massage techniques, you can customize your experience to target specific areas of tension.</p>
+                    <p>Perfect for solo relaxation or a quick break between activities, our massage chairs provide a spa-like experience right at our facility.</p>
+                </div>
+                <div class="content-images">
+                    <img src="https://placehold.co/600x400/c0392b/white?text=Massage+Chair" alt="Massage Chair" class="single-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hours Section -->
+    <section class="hours-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Summer Open Hours 2025</h2>
+                <p style="color: #ccc; margin-top: 15px;">June 29th – September 1st, 2025</p>
+            </div>
+            <div class="hours-grid">
+                <div class="hours-card">
+                    <h3>Bowling/ Arcade Room & Massage Chairs</h3>
+                    <table class="hours-table">
+                        <tr>
+                            <th>Day</th>
+                            <th>Hours</th>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>Close</td>
+                        </tr>
+                        <tr>
+                            <td>Monday</td>
+                            <td>Close</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>Close</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>2 pm – 8 pm</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>2 pm – 8 pm</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>1 pm – 12 am</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>Noon – 12 am</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="hours-card">
+                    <h3>Restaurant/ AR Darts & Billard Table</h3>
+                    <table class="hours-table">
+                        <tr>
+                            <th>Day</th>
+                            <th>Hours</th>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>Close</td>
+                        </tr>
+                        <tr>
+                            <td>Monday</td>
+                            <td>Close</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>Close</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>Close</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>Close</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>5 pm – 12 am</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>Noon – 12 am</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 30px; color: #FFD700;">
+                <p>We also take big group (+50 people) booking at any time, and Birthday party on Friday night and all Saturday.</p>
+                <p style="margin-top: 15px; font-size: 1.2rem;">For more information and booking, please contact us!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Address</h3>
+                    <p>1799 Garden St, Sudbury</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Phone</h3>
+                    <p><a href="tel:705-566-0201">705-566-0201</a></p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p><a href="mailto:sudburyplazabowl@gmail.com">sudburyplazabowl@gmail.com</a></p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <h3>Facebook</h3>
+                    <p><a href="https://www.facebook.com/bowlingsnooker/" target="_blank" rel="noopener noreferrer">Plaza Bowl</a></p>
+                    <p>@bowl_plaza1</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black py-12">
-        <div class="container mx-auto px-6">
-            <div class="text-center">
-                <div class="flex items-center justify-center space-x-3 mb-4">
-                    <div class="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center">
-                        <span class="text-xl font-bold">PB</span>
-                    </div>
-                    <div class="text-left">
-                        <h3 class="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Plaza Bowl</h3>
-                        <p class="text-xs text-gray-400">Since 1960s</p>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Plaza Bowl</h3>
+                    <p>Sudbury's premier bowling and entertainment destination since the 1960s.</p>
+                    <p>We offer a complete entertainment experience with bowling, arcade games, restaurant, billiards, AR darts, and massage chairs.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <a href="#home">Home</a>
+                    <a href="#bowling">Bowling</a>
+                    <a href="#arcade">Arcade</a>
+                    <a href="#restaurant">Restaurant</a>
+                    <a href="#billiards">Billiards</a>
+                    <a href="#darts">AR Darts</a>
+                    <a href="#massage">Massage Chairs</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Hours</h3>
+                    <p>Summer Hours:</p>
+                    <p>June 29th – September 1st, 2025</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/bowlingsnooker/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
-                <p class="text-gray-400 mb-4">Sudbury's Premier Bowling Entertainment Center</p>
-                <p class="text-sm text-gray-500">© 2025 Plaza Bowl. All rights reserved.</p>
+            </div>
+            <div class="copyright">
+                <p>Copyright &copy; 2025 Plaza Bowl. All rights reserved.</p>
             </div>
         </div>
-    </footer>
-
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Add scroll effect to header
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.classList.add('bg-black');
-                header.classList.remove('bg-black/90');
-            } else {
-                header.classList.add('bg-black/90');
-                header.classList.remove('bg-black');
-            }
-        });
-
-        // Form submission
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! We will contact you soon.');
-            this.reset();
-        });
-    </script>
+</footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
