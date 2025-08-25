@@ -83,12 +83,48 @@ nav ul li a:hover {
 /* Hero Section */
 .hero {
     height: 80vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://placehold.co/1200x600/1a2a6c/white?text=') center/cover no-repeat;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-bg.active {
+    opacity: 1;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    z-index: -1;
 }
 
 .hero-content {
@@ -203,6 +239,160 @@ section {
 
 .single-image {
     grid-column: span 2;
+}
+
+/* Carousel Styles */
+.carousel-container {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.carousel-slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    position: relative;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.9);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: #1a2a6c;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    background: #FFD700;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-prev {
+    left: 20px;
+}
+
+.carousel-next {
+    right: 20px;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.carousel-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicator.active {
+    background: #FFD700;
+    transform: scale(1.2);
+}
+
+.carousel-indicator:hover {
+    background: rgba(255,255,255,0.8);
+}
+
+/* Image Zoom Effect */
+.zoomed {
+    transform: scale(1.8);
+    z-index: 1000;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.8);
+    max-width: 90vw;
+    max-height: 90vh;
+    cursor: zoom-out;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+/* Mobile Navigation */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Enhanced Grid Layout for Arcade Images */
+.content-images {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.content-images img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.content-images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
 }
 
 /* Hours Section */
@@ -373,22 +563,40 @@ footer {
         text-align: center;
     }
 
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+
     nav ul {
+        display: none;
+        flex-direction: column;
         margin-top: 20px;
-        flex-wrap: wrap;
-        justify-content: center;
+        width: 100%;
+        background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    nav ul.active {
+        display: flex;
     }
 
     nav ul li {
-        margin: 5px 10px;
+        margin: 10px 0;
     }
 
     .hero h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .hero p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .content-row {
@@ -399,7 +607,72 @@ footer {
         flex-direction: column;
     }
 
-    .content-text, .content-images {
+    .content-text, .content-images, .carousel-container {
         width: 100%;
+    }
+
+    .carousel {
+        height: 300px;
+    }
+
+    .carousel-prev,
+    .carousel-next {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .carousel-prev {
+        left: 10px;
+    }
+
+    .carousel-next {
+        right: 10px;
+    }
+
+    .content-images {
+        grid-template-columns: 1fr;
+    }
+
+    .single-image {
+        grid-column: 1;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+
+    .content-text h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .carousel {
+        height: 250px;
+    }
+
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+
+    .content-text h3 {
+        font-size: 1.3rem;
+    }
+
+    .hours-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .contact-icon {
+        font-size: 2.5rem;
     }
 }
