@@ -41,9 +41,20 @@ plaza-bowl-website/
 
 1. **Responsive Design**: Adapts to desktop, tablet, and mobile screens
 2. **Modern UI**: Clean layout with gradient backgrounds and hover effects
-3. **Service Sections**: Dedicated areas for each entertainment offering
-4. **Contact Information**: Easy access to phone, email, and social media
-5. **Hours Display**: Clear presentation of summer operating hours
+3. **Interactive Hero Carousel**: Image slideshow with navigation buttons, indicators, and auto-play
+4. **Service Sections**: Dedicated areas for each entertainment offering
+5. **Contact Information**: Easy access to phone, email, and social media
+6. **Hours Display**: Clear presentation of summer operating hours
+
+## Hero Carousel Features
+
+The hero section includes an interactive image carousel with:
+- Navigation buttons (previous/next) with hover effects
+- Visual indicator dots showing current slide position
+- Auto-play functionality (changes slides every 5 seconds)
+- Pause on hover behavior
+- Touch/swipe support for mobile devices
+- Smooth fade transitions between images
 
 ## Setup
 
